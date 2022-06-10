@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 4d18d57819b13d94aaff417ebb53abc8
+  - enabled: 1
+    path: Assets/Scenes/Tela de morte.unity
+    guid: a33c318365871b44e8250198b1ec4610
+  - enabled: 1
+    path: Assets/Scenes/Tela inicial.unity
+    guid: 31719cc95158e754a89614ffdeb64b21
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: fb4908b5bcbdd394d8293f4772d343a7
   m_configObjects: {}
