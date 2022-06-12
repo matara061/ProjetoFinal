@@ -25,12 +25,19 @@ public class Dialogo : MonoBehaviour
     void Update()
     {
         //OBS: Ajustar. Não quero que o player tenha que clicar para aparecer o dialogo.
-        if(PlayerAreaDialogo /*&& Input.GetButtonDown("Fire1")*/)
+        if(PlayerAreaDialogo && Input.GetButtonDown("Fire1"))
         {
+            FindObjectOfType<AudioManager>().Play("Click");
             //para saber que deve seguir com o dialogo, pq ele já está iniciado.
             if(!DialogoIniciado)
             {
                 IniciarDialogo();
+            }
+
+            else if(TextoDaCaixa.text == LinhasDeDialogo[LinhaAtual])
+            {
+                LinhaSeguinte();
+
             }
             
         }
@@ -38,12 +45,32 @@ public class Dialogo : MonoBehaviour
         
     }
 
+
     void IniciarDialogo()
     {
         DialogoIniciado = true;
         CaixaDeDialogo.SetActive(true);
         StartCoroutine(EfeitoTexto());
+        
+        //Vai mostrar o que se encontra no primeiro elemento
         LinhaAtual = 0;
+    }
+
+    void LinhaSeguinte()
+     {
+        //Incrementa a linha atual para mostrar os demais elementos existentes
+         LinhaAtual++;
+         if(LinhaAtual < LinhasDeDialogo.Length)
+         {
+             StartCoroutine(EfeitoTexto());
+
+         }
+         else
+         {
+             //DialogoIniciado = false;
+             CaixaDeDialogo.SetActive(false);
+             Debug.Log("Para de Clicar");
+         }
     }
 
     IEnumerator EfeitoTexto()

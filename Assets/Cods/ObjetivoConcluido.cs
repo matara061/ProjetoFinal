@@ -23,6 +23,7 @@ public class ObjetivoConcluido : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             Debug.Log("Concluido");
+            FindObjectOfType<AudioManager>().Play("Estalo");
             StartCoroutine(Desativar());
         }
     }
