@@ -8,6 +8,7 @@ public class ObjetivoConcluido : MonoBehaviour
 
     void Start()
     {
+        //Busca no inspector o objeto informado dentro das aspas
         Objetivos = GameObject.Find("Objetivos");
         
     }
@@ -26,6 +27,7 @@ public class ObjetivoConcluido : MonoBehaviour
         }
     }
 
+    //Pausa o sistema por 3 segundos, e em seguida realiza a declaração abaixo dele.
     IEnumerator Desativar()
     {
         Objetivos.GetComponent<Objetivos>().concluido.SetActive(true);
