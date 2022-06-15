@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObjetivoConcluido : MonoBehaviour
 {
     GameObject Objetivos;
+    public GameObject Efeito;
 
     void Start()
     {
@@ -24,8 +25,10 @@ public class ObjetivoConcluido : MonoBehaviour
         {
             Debug.Log("Concluido");
             FindObjectOfType<AudioManager>().Play("Estalo");
+            Instantiate(Efeito,transform.position,transform.rotation);
             StartCoroutine(Desativar());
         }
+        
     }
 
     //Pausa o sistema por 3 segundos, e em seguida realiza a declaração abaixo dele.
