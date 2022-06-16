@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class ThirdPersonMovement : MonoBehaviour
 {
+
+    public PlayerMenus Menu;
 
     public CharacterController charctrl;
     public Animator anim;
@@ -21,7 +22,7 @@ public class ThirdPersonMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked; // aperte esc para o cursor voltar
+       // Cursor.lockState = CursorLockMode.Locked; // aperte esc para o cursor voltar
         currentCamera = Camera.main.gameObject;     //busca a camera do jogador
     }
 
@@ -31,7 +32,11 @@ public class ThirdPersonMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))     //se apertar pulo
             jumpbtn = true; //habilita abooleana de pulo
 
-
+        if(Menu.Pause)
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }else
+            Cursor.lockState = CursorLockMode.Locked;
 
 
 
@@ -94,5 +99,10 @@ public class ThirdPersonMovement : MonoBehaviour
         jumpbtn = false;
     }
 
-    
+    public void Damage()
+    {
+        // animação de dano (talvez)
+    }
+
+
 }

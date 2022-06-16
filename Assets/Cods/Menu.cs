@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField]
+    private PlayerMenus Pause;
     void Start()
     {
-        
+        Pause = FindObjectOfType<PlayerMenus>();
     }
 
     // Update is called once per frame
@@ -20,6 +22,7 @@ public class Menu : MonoBehaviour
     public void Resume()
     {
         SceneManager.UnloadScene("Menu");
+        Pause.Pause = false;
     }
 
     public void TelaInicial()
