@@ -56,7 +56,7 @@ public class ThirdPersonMovement : MonoBehaviour
         Vector3 relativeDirectionWOy = relativedirection;
         relativeDirectionWOy = new Vector3(relativedirection.x, 0, relativedirection.z);
 
-        anim.SetFloat("Speed", charctrl.velocity.magnitude);//seta a animacao de velocidade
+       // anim.SetFloat("Speed", charctrl.velocity.magnitude);//seta a animacao de velocidade
 
         //movimenta por character control
         charctrl.Move(relativedirection * 0.1f);
@@ -67,7 +67,7 @@ public class ThirdPersonMovement : MonoBehaviour
         //se apertar o soco
         if (Input.GetButtonDown("Fire1"))
         {
-            anim.SetTrigger("PunchA"); //chama a animacao de soco
+           // anim.SetTrigger("PunchA"); //chama a animacao de soco
         }
         //se personagem está no chao
         if (charctrl.isGrounded)
@@ -77,7 +77,7 @@ public class ThirdPersonMovement : MonoBehaviour
         //se ele está no chao e apertou pulo
         if (charctrl.isGrounded && jumpbtn)
         {
-            anim.SetTrigger("Jump"); //chama animacao de pulo
+           // anim.SetTrigger("Jump"); //chama animacao de pulo
             yresult = jumpspeed;  //aplica a forca de pulo
 
         }
@@ -86,7 +86,7 @@ public class ThirdPersonMovement : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position - (transform.forward * 0.1f) + transform.up * 0.3f, Vector3.down, out hit, 1000))
         {
-            anim.SetFloat("JumpHeight", hit.distance);
+           // anim.SetFloat("JumpHeight", hit.distance);
             if (hit.distance > 0.5f && jumpbtn)
             {
                 
