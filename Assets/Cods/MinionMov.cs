@@ -21,7 +21,7 @@ public class MinionMov : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
 
-        agent.stoppingDistance = AttackRadius;
+       // agent.stoppingDistance = AttackRadius;
     }
 
     // Update is called once per frame

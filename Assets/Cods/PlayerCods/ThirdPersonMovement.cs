@@ -29,8 +29,13 @@ public class ThirdPersonMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))     //se apertar pulo
+        if (Input.GetButtonDown("Jump"))//se apertar pulo
+        {
+            yresult = jumpspeed;    //forca o pulo
+           // transform.parent = null;     //desparenta forcado
             jumpbtn = true; //habilita abooleana de pulo
+
+        }
 
         if(Menu.Pause)
         {
@@ -77,8 +82,10 @@ public class ThirdPersonMovement : MonoBehaviour
         //se ele está no chao e apertou pulo
         if (charctrl.isGrounded && jumpbtn)
         {
+           // Debug.Log("pula1");
            // anim.SetTrigger("Jump"); //chama animacao de pulo
             yresult = jumpspeed;  //aplica a forca de pulo
+           
 
         }
 
@@ -89,9 +96,8 @@ public class ThirdPersonMovement : MonoBehaviour
            // anim.SetFloat("JumpHeight", hit.distance);
             if (hit.distance > 0.5f && jumpbtn)
             {
-                
                 yresult = .1f;
-                
+            
                 jumpbtn = false;
                 return;
             }

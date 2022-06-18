@@ -1,16 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class PlayerDano : MonoBehaviour
+public class MinionDam : MonoBehaviour
 {
-
-    public int life = 10;
-    public bool morte;
-    public ThirdPersonMovement player;
-
-    public GameObject lifeBar;
+    public MinionMov minion;
+    public int life = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,17 +17,15 @@ public class PlayerDano : MonoBehaviour
     {
         if(life <= 0)
         {
-            Destroy(gameObject, 2);
-            SceneManager.LoadScene("Tela de morte");
+            Destroy(gameObject);
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("") || collision.gameObject.CompareTag(""))
+        if (collision.gameObject.CompareTag("Player"))
         {
             life--;
-            player.Damage();
             Debug.Log("Dano");
         }
     }
