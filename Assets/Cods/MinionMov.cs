@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class MinionMov : MonoBehaviour
 {
-
+    [Header("Referencias")]
     public NavMeshAgent agent;
     public Animator anim;
     [SerializeField]
@@ -29,19 +29,19 @@ public class MinionMov : MonoBehaviour
     {
         float distance = Vector3.Distance(target.transform.position, transform.position);// distancia entre IA e o player
 
-        if (distance <= lookRadius)
+        if (distance <= lookRadius) // distancia de perseguir 
         {
             FaceTarget();
             agent.SetDestination(target.transform.position);
         }
         else
-            if (distance <= AttackRadius)
+            if (distance <= AttackRadius) // distancia de attack
         {
             // animação attack, ativar box collider para dano
         }
     }
 
-    void FaceTarget()
+    void FaceTarget() // rotacionar para ficar de frente com o player
     {
         Vector3 direction = (target.transform.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));

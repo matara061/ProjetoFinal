@@ -7,6 +7,7 @@ TagManager:
   - Minion
   - Boss
   - PontoB
+  - slide
   layers:
   - Default
   - TransparentFX
