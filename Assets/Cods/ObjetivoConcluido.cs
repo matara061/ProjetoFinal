@@ -25,8 +25,10 @@ public class ObjetivoConcluido : MonoBehaviour
         {
             Debug.Log("Concluido");
             FindObjectOfType<AudioManager>().Play("Estalo");
+            
             Instantiate(Efeito,transform.position,transform.rotation);
             StartCoroutine(Desativar());
+
         }
         
     }
