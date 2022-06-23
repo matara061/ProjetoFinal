@@ -33,11 +33,14 @@ public class MinionMov : MonoBehaviour
         {
             FaceTarget();
             agent.SetDestination(target.transform.position);
+            
         }
         else
             if (distance <= AttackRadius) // distancia de attack
         {
-            // animação attack, ativar box collider para dano
+            anim.Play("Attack'1"); // animação attack, ativar box collider para dano
+            FindObjectOfType<AudioManager>().Play("AttackMinion"); // Ativa o gatilho de som do audio manager.
+            Debug.Log("Attack");
         }
     }
 

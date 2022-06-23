@@ -26,6 +26,7 @@ public class MinionDam : MonoBehaviour
 
         if(currentLife <= 0)
         {
+            FindObjectOfType<AudioManager>().Play("MinionDead");
             Destroy(gameObject);
         }
     }
@@ -35,6 +36,7 @@ public class MinionDam : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             currentLife--;
+            FindObjectOfType<AudioManager>().Play("MinionDamage");
             Debug.Log("Dano");
         }
     }
