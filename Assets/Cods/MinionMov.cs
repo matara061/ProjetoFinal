@@ -10,6 +10,9 @@ public class MinionMov : MonoBehaviour
     public Animator anim;
     [SerializeField]
     GameObject target;
+    [SerializeField]
+    private PlayerDano dano;
+
 
     [Header("Areas")]
     public float AttackRadius = 10f;
@@ -18,10 +21,11 @@ public class MinionMov : MonoBehaviour
     void Start()
     {
         target = GameObject.FindWithTag("Player");
+        dano = FindObjectOfType<PlayerDano>();
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
 
-       // agent.stoppingDistance = AttackRadius;
+        //agent.stoppingDistance = AttackRadius - 2;
     }
 
     // Update is called once per frame
@@ -29,19 +33,29 @@ public class MinionMov : MonoBehaviour
     {
         float distance = Vector3.Distance(target.transform.position, transform.position);// distancia entre IA e o player
 
-        if (distance <= lookRadius) // distancia de perseguir 
+        if (distance <= lookRadius && distance > AttackRadius) // distancia de perseguir 
         {
             FaceTarget();
             agent.SetDestination(target.transform.position);
+            Debug.Log("persegui" + distance);
             
         }
         else
-            if (distance <= AttackRadius) // distancia de attack
+            if(distance <= AttackRadius)
         {
-            anim.Play("Attack'1"); // animação attack, ativar box collider para dano
-            FindObjectOfType<AudioManager>().Play("AttackMinion"); // Ativa o gatilho de som do audio manager.
-            Debug.Log("Attack");
+            FaceTarget();
+            ataque(); // colocar um 
+            
         }
+            
+    }
+
+    private void ataque()
+    {
+        anim.Play("Armature|Attack1"); // animação attack, ativar box collider para dano
+        FindObjectOfType<AudioManager>().Play("AttackMinion"); // Ativa o gatilho de som do audio manager.
+        dano.dam = true;
+        Debug.Log("Attack");
     }
 
     void FaceTarget() // rotacionar para ficar de frente com o player

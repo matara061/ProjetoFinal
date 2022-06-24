@@ -10,6 +10,7 @@ public class PlayerDano : MonoBehaviour
     public int life = 10;
     public int currentLife = 10;
     public bool morte;
+    public bool dam;
 
     [Header("Referencias")]
     public ThirdPersonMovement player;
@@ -22,6 +23,7 @@ public class PlayerDano : MonoBehaviour
     {
         slide = FindObjectOfType<Slider>();
         currentLife = life;
+        dam = false;
     }
 
     // Update is called once per frame
@@ -32,18 +34,26 @@ public class PlayerDano : MonoBehaviour
         //     Destroy(gameObject, 2);
         //     SceneManager.LoadScene("Tela de morte");
         // }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Minion") || collision.gameObject.CompareTag("Boss")) // verifica se esta em contato com inimigo
+        if(dam)
         {
             currentLife--;
             SetLife(currentLife);
             player.Damage();
+            dam = false;
             Debug.Log("Dano");
         }
     }
+
+   // private void OnCollisionEnter(Collision collision)
+   // {
+   //     if (collision.gameObject.CompareTag("Minion") || collision.gameObject.CompareTag("Boss")) // verifica se esta em contato com inimigo
+   //     {
+   //         currentLife--;
+   //         SetLife(currentLife);
+   //         player.Damage();
+   //         Debug.Log("Dano");
+   //     }
+   // }
 
     public void SetMaxLife(int life)
     {
