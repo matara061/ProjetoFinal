@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3826402840666715181}
   - component: {fileID: 3826402840666715178}
   m_Layer: 0
-  m_Name: Objetivos
+  m_Name: Tiro2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4816,7 +4816,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: -876546973899608171, guid: 3cab68a042547f1439051bb3683d61b5, type: 3}
   - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
