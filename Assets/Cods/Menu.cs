@@ -27,17 +27,21 @@ public class Menu : MonoBehaviour
 
     public void TelaInicial()
     {
+       
         SceneManager.LoadScene("Tela inicial");
     }
 
     public void Iniciar()
     {
+        FindObjectOfType<AudioManager>().Play("Iniciar"); // Carrega um som ao apertar o botão correspondente
         // carregar cena inicial
     }
 
     public void Creditos()
     {
+        FindObjectOfType<AudioManager>().Play("Creditos");// som 
         SceneManager.LoadScene("Creditos");
+
     }
 
     public void Voltar()
@@ -47,6 +51,7 @@ public class Menu : MonoBehaviour
 
     public void Sair()
     {
+        FindObjectOfType<AudioManager>().Play("Exit");// som 
         Application.Quit();
     }
 }
