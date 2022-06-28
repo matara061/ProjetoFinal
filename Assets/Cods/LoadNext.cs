@@ -24,6 +24,7 @@ public class LoadNext : MonoBehaviour
         {
             Debug.Log("Portal");
             SceneManager.LoadScene(SceneName);
+
         }
     }
 }

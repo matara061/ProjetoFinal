@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MinionScene.unity
     guid: 175e26e7f52728b4c8ced092621a1de3
+  - enabled: 1
+    path: Assets/Scenes/Inicio.unity
+    guid: c9f4c331feaee46429c245e7bc86d3ad
+  - enabled: 1
+    path: Assets/Scenes/Dungeon Um.unity
+    guid: f940dd4041b45504c8d019130c3788ae
+  - enabled: 1
+    path: Assets/Scenes/Dungeon 2.unity
+    guid: 8ef66c37ade789142a179c56e75c7a77
   m_configObjects: {}

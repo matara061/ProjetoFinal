@@ -45,6 +45,11 @@ public class Mao2movi : MonoBehaviour
             agent.speed = 0;
             StartCoroutine(wait());
         }
+        if (other.CompareTag("Bomba"))
+        {
+            anima.Play("Armature|ArmatureAction 4");
+            
+        }
     }
 
     IEnumerator wait() 

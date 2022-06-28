@@ -27,6 +27,9 @@ public class PlayerTiro : MonoBehaviour
 
     //OBS: Tiro e bala são coisas diferentes. Quando digo tiro: é a função de atirar. Quando digo bala: é o projetil lançado.
 
+
+    Animator animator;
+
     void Start()
     {
 
@@ -41,6 +44,9 @@ public class PlayerTiro : MonoBehaviour
             nextTimeToFire = Time.time + FireRate;
             FindObjectOfType<AudioManager>().Play("Drone1"); // Som
             Rigidbody rb = Instantiate(bala1, ShootPointDrone1.position, ShootPointDrone1.rotation).GetComponent<Rigidbody>();
+
+            animator.Play("Armature|ataque");
+
 
             //Adiciona força ao ponto do tiro, para instanciar as balas de maneira adequada
             rb.AddRelativeForce(new Vector3(1, 3, 32), ForceMode.Impulse);
