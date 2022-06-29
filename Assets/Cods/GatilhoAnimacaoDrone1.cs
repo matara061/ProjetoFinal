@@ -17,7 +17,7 @@ public class GatilhoAnimacaoDrone1 : MonoBehaviour
        // Ativa a animação do drone1 ao atirar
         if (Input.GetButtonDown("Fire2"))
         {
-                anim.Play("Armação|Shoot");
+                anim.Play("Armacao|Shoot");
 
         }
     }

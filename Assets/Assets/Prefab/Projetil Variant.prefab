@@ -65,7 +65,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7fbe73f74912f584282fcfdda8834f67, type: 3}
       propertyPath: m_Name
-      value: Projetil
+      value: Projetil Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7fbe73f74912f584282fcfdda8834f67, type: 3}
+      propertyPath: m_TagString
+      value: Tiro
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fbe73f74912f584282fcfdda8834f67, type: 3}

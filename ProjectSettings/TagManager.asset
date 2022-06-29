@@ -10,6 +10,7 @@ TagManager:
   - slide
   - Caixa
   - Bomba
+  - Tiro
   layers:
   - Default
   - TransparentFX

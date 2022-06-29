@@ -44,13 +44,25 @@ public class ThirdPersonMovement : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
 
 
+        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical")) // Faz com que a personagem rode a animação de Andar quando aperta W, A, S, D
+        {
+            anim.SetBool("Andar", true);
+            anim.SetBool("Parado", false);
 
+        }
+        else
+        {
+            anim.SetBool("Andar", false);
+            anim.SetBool("Parado", true);
+        }
 
     }
 
     private void FixedUpdate()
     {
         movaxis = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")); //captura o joystick e teclado
+     
+        
 
         yresult -= gravity * Time.fixedDeltaTime;   //gravidade fica pesada
 
@@ -77,6 +89,7 @@ public class ThirdPersonMovement : MonoBehaviour
         //se personagem está no chao
         if (charctrl.isGrounded)
         {
+            //anim.SetBool("Andar", false); // Faz com que a personagem rode a animação de Idle quando parado em um ponto
             yresult = 0;    //zera a gravidade (evita bug de quada muito rapida) 
         }
         //se ele está no chao e apertou pulo

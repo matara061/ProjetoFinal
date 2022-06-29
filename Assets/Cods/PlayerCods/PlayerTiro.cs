@@ -45,7 +45,6 @@ public class PlayerTiro : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Drone1"); // Som
             Rigidbody rb = Instantiate(bala1, ShootPointDrone1.position, ShootPointDrone1.rotation).GetComponent<Rigidbody>();
 
-            animator.Play("Armature|ataque");
 
 
             //Adiciona força ao ponto do tiro, para instanciar as balas de maneira adequada
@@ -60,7 +59,8 @@ public class PlayerTiro : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Drone2"); 
             Rigidbody rb = Instantiate(bala2, ShootPointDrone2.position, ShootPointDrone2.rotation).GetComponent<Rigidbody>();
 
-           
+            
+
             rb.AddRelativeForce(new Vector3(1, 3, 32), ForceMode.Impulse);
         }
 

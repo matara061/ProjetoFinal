@@ -37,29 +37,39 @@ public class MinionMov : MonoBehaviour
         {
             FaceTarget();
             agent.SetDestination(target.transform.position);
-            Debug.Log("persegui" + distance);
-            
+            FindObjectOfType<AudioManager>().Play("AttackMinion"); // Ativa o gatilho de som do audio manager quando o personagem olha para o minion.
+
+            //Debug.Log("persegui" + distance);
+
         }
         else
             if(distance <= AttackRadius)
         {
             FaceTarget();
-            ataque(); // colocar um 
-            
+            StartCoroutine(ataque()); // colocar um 
         }
-            
+        
+
     }
 
-    private void ataque()
+    IEnumerator ataque() // Cooldown do ataque 
     {
-        anim.Play("Armature|Attack1"); // animação attack, ativar box collider para dano
-        FindObjectOfType<AudioManager>().Play("AttackMinion"); // Ativa o gatilho de som do audio manager.
+        yield return new WaitForSeconds(1f);
+        anim.SetBool("Ataque",true); // animação attack, ativar box collider para dano
         dano.dam = true;
-        Debug.Log("Attack");
+        //Debug.Log("Attack");
+
+        yield return new WaitForSeconds(1.1f);
+        anim.SetBool("Ataque", false);
+        dano.dam = false;
+
+        //obs: coroutine buga gatilho do audio
+
     }
 
     void FaceTarget() // rotacionar para ficar de frente com o player
     {
+        
         Vector3 direction = (target.transform.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);

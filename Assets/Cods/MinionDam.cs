@@ -33,7 +33,7 @@ public class MinionDam : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Tiro"))
         {
             currentLife--;
             FindObjectOfType<AudioManager>().Play("MinionDamage");
