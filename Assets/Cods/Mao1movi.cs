@@ -36,7 +36,7 @@ public class Mao1movi : MonoBehaviour
         if (morrer == 1)
         {
             anima.Play("Armature|ArmatureAction G3");
-            Destroy(gameObject);
+            Destroy(gameObject, 2.5f);
             mao2.berserk = 1;
         }
     }
