@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PontoCaixa : MonoBehaviour
 {
-    public bool entrou;
+    //public GameObject Efeito; // Instanciar efeito ao ser destruido
     // Start is called before the first frame update
     void Start()
     {
-        entrou = false;
+        
     }
 
     // Update is called once per frame
@@ -17,14 +17,15 @@ public class PontoCaixa : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider collision) // ao entrar no collider
+    private void OnTriggerEnter(Collider collision) 
     {
-        if (collision.gameObject.CompareTag("Caixa") && !entrou)
+        if (collision.gameObject.CompareTag("Caixa")) //  ponto de pressão vai ser destruido ao entrar em contato com a caixa
+                                                    // Dessa forma, o bloqueio existente na hierarquia tbm é destruido
         {
-            Debug.Log("caixa");
-            entrou = true;
-            // fazer algo
-
+            Debug.Log("Destruido");
+            Destroy(gameObject);
+            //FindObjectOfType<AudioManager>().Play("MinionDead"); //Vou inserir som de explosão
+            //Instantiate(Efeito, tranform.position, transform.rotantion); // instanciar efeito
         }
     }
 }

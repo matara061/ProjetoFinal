@@ -6,7 +6,7 @@ public class MoivimentacaoBasica : MonoBehaviour
 {
     public float Velocidade;
     public float Rotacao;
-    Animator anim;
+    public Animator anim;
     void Start()
     {
         Velocidade = 5f;
@@ -14,13 +14,27 @@ public class MoivimentacaoBasica : MonoBehaviour
     }
     void Update()
     {
-        //GetAxis pega inputs do teclado ou joystick para uma movimentação mais fluida.
-        //Utilize W e S para aplicar força e velocidade aquela direção
+        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical")) // Faz com que a personagem rode a animaï¿½ï¿½o de Andar quando aperta W, A, S, D
+        {
+            anim.SetBool("Andar", true);
+            anim.SetBool("Parado", false);
+
+        }
+        else
+        {
+            anim.SetBool("Andar", false);
+            anim.SetBool("Parado", true);
+        }
+        
+        //GetAxis pega inputs do teclado ou joystick para uma movimentaï¿½ï¿½o mais fluida.
+        //Utilize W e S para aplicar forï¿½a e velocidade aquela direï¿½ï¿½o
         float translate = (Input.GetAxis("Vertical") * Velocidade) * Time.deltaTime;
        
 
-        //Utilize A e D para escolher a direção
+        //Utilize A e D para escolher a direï¿½ï¿½o
         float rotate = (Input.GetAxis("Horizontal") * Rotacao) * Time.deltaTime;
+
+
 
         //transform do objeto
         transform.Translate(0, 0, translate);
