@@ -11,6 +11,9 @@ TagManager:
   - Caixa
   - Bomba
   - Tiro
+  - mao1
+  - mao2
+  - placa
   layers:
   - Default
   - TransparentFX

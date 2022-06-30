@@ -11,13 +11,14 @@ public class Mao2movi : MonoBehaviour
     public Transform proteger;
     public Mao1movi mao1;
     public int trocar1;
-    static public int morrer;
+    public int berserk;
+    public int morrer;
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         anima = GetComponent<Animator>();
-        trocar1=0;
+        trocar1 = 0;
         agent.speed = 7;
         morrer = 0;
 
@@ -32,26 +33,31 @@ public class Mao2movi : MonoBehaviour
             anima.SetBool("Proteger", false);
             anima.SetBool("Ir", true);
         }
-        if (morrer == 1) 
+        if (morrer == 1)
         {
+            anima.Play("Armature|ArmatureAction G4");
             Destroy(gameObject);
+            mao1.berserk = 1;
         }
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) 
+        if (other.CompareTag("Player"))
         {
             anima.SetBool("Atacar", true);
             agent.speed = 0;
             StartCoroutine(wait());
         }
-        if (other.CompareTag("Bomba"))
-        {
-            anima.Play("Armature|ArmatureAction 4");
-            
-        }
     }
-
+    //private void OnCollisionEnter(Collision other)
+    //{
+    //    if (other.gameObject.CompareTag("Bomba"))
+    //    {
+    //        anima.Play("Armature|ArmatureAction G4");
+    //        Destroy(gameObject);
+    //        mao1.berserk = 1;
+    //    }
+    //}
     IEnumerator wait() 
     {
         yield return new WaitForSeconds(5f);

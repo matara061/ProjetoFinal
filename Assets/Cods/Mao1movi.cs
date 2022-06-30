@@ -12,7 +12,8 @@ public class Mao1movi : MonoBehaviour
     public Transform proteger;
     public Mao2movi mao2;
     public int trocar2;
-    static public int morrer;
+    public int berserk;
+    public int morrer;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +35,9 @@ public class Mao1movi : MonoBehaviour
         }
         if (morrer == 1)
         {
+            anima.Play("Armature|ArmatureAction G3");
             Destroy(gameObject);
+            mao2.berserk = 1;
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -46,6 +49,15 @@ public class Mao1movi : MonoBehaviour
             StartCoroutine(wait());
         }
     }
+    //private void OnCollisionEnter(Collision other)
+    //{
+    //    if (other.gameObject.CompareTag("Bomba"))
+    //    {
+    //        anima.Play("Armature|ArmatureAction G3");
+    //        Destroy(gameObject);
+    //        mao2.berserk = 1;
+    //    }
+    //}
 
     IEnumerator wait()
     {
