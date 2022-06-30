@@ -10,8 +10,8 @@ public class KaduIA : MonoBehaviour
     public Animator anim;
 
     //Pontos no qual a IA vai ficar andando de um lado para outro
-    public GameObject PontoA;
-    public GameObject PontoB;
+    //public GameObject PontoA;
+   // public GameObject PontoB;
 
     //Detectar e virar para o player
     GameObject Target;
@@ -38,7 +38,10 @@ public class KaduIA : MonoBehaviour
             
             agent.isStopped = true;
             FaceTarget();
-            anim.Play("Armature|Ação");
+            //anim.SetBool("Acao",true);
+            //anim.SetBool("Idle",false);
+
+            anim.Play("Armature|Acao");
             
         }
 
@@ -69,17 +72,17 @@ public class KaduIA : MonoBehaviour
     IEnumerator Loop()
     {
         //anim.Play("Armature|Andar");
-        agent.SetDestination(PontoA.transform.position);
+        //agent.SetDestination(PontoA.transform.position);
 
     // para a IA ficar parada em um ponto por 10 segundos e dps vai para outro.
         yield return new WaitForSeconds(10f);
 
         //agent.isStopped = false;
-        agent.SetDestination(PontoB.transform.position);
+        //agent.SetDestination(PontoB.transform.position);
 
         yield return new WaitForSeconds(20f);
 
-        agent.SetDestination(PontoA.transform.position);
+        //agent.SetDestination(PontoA.transform.position);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -87,7 +90,8 @@ public class KaduIA : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
         
-        anim.Play("Armature|Idle");
+        anim.SetBool("Idle",true);
+        anim.SetBool("Acao",false);
         }
         
     }
