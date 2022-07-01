@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossManager : MonoBehaviour
 {
@@ -59,5 +60,12 @@ public class BossManager : MonoBehaviour
     void Morrer() 
     {
         
+    }
+
+    IEnumerator Creditos()
+    {
+        yield return new WaitForSeconds(10f);
+        FindObjectOfType<AudioManager>().Play("Creditos");// som 
+        SceneManager.LoadScene("Creditos");
     }
 }

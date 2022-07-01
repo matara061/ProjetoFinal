@@ -23,6 +23,22 @@ PrefabInstance:
       propertyPath: m_Parameters.colorGradient.key0.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1199842768, guid: 5ac4efda2c180814cbb8c59983fa53d2, type: 3}
+      propertyPath: m_Radius
+      value: 0.19689012
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199842768, guid: 5ac4efda2c180814cbb8c59983fa53d2, type: 3}
+      propertyPath: m_Center.x
+      value: 0.010302961
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199842768, guid: 5ac4efda2c180814cbb8c59983fa53d2, type: 3}
+      propertyPath: m_Center.y
+      value: -0.000000029802322
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199842768, guid: 5ac4efda2c180814cbb8c59983fa53d2, type: 3}
+      propertyPath: m_Center.z
+      value: -1.03126915e-22
+      objectReference: {fileID: 0}
     - target: {fileID: 221160600555446964, guid: 5ac4efda2c180814cbb8c59983fa53d2, type: 3}
       propertyPath: Efeito
       value: 
@@ -34,6 +50,18 @@ PrefabInstance:
     - target: {fileID: 5808734574762966852, guid: 5ac4efda2c180814cbb8c59983fa53d2, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808734574762966852, guid: 5ac4efda2c180814cbb8c59983fa53d2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808734574762966852, guid: 5ac4efda2c180814cbb8c59983fa53d2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808734574762966852, guid: 5ac4efda2c180814cbb8c59983fa53d2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5808734574762966852, guid: 5ac4efda2c180814cbb8c59983fa53d2, type: 3}
       propertyPath: m_LocalPosition.x

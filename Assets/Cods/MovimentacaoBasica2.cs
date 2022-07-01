@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MoivimentacaoBasica : MonoBehaviour
+public class MovimentacaoBasica2 : MonoBehaviour
 {
     public float Velocidade;
     public float Rotacao;
     public Animator anim;
     void Start()
     {
-        Velocidade = 5f;
+        Velocidade = 15f;
         Rotacao = 150f;
     }
     void Update()
@@ -40,6 +40,22 @@ public class MoivimentacaoBasica : MonoBehaviour
         //transform do objeto
         transform.Translate(0, 0, translate);
         transform.Rotate(0, rotate, 0);
+
+        // Mod caso de erro na apresentacao
+        if (Input.GetKeyDown(KeyCode.J)){
+            SceneManager.LoadScene("Dungeon Um");
+
+        }
+        if (Input.GetKeyDown(KeyCode.K)){
+            SceneManager.LoadScene("Dungeon 2");
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.L)){
+            FindObjectOfType<AudioManager>().Play("Creditos");
+            SceneManager.LoadScene("Creditos");
+
+        }
 
     }
 }

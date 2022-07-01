@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerTiro : MonoBehaviour
 {
-    //Para instanciar um pequeno efeito quando a condição de tiro é efetuada.
+    //Para instanciar um pequeno efeito quando a condiï¿½ï¿½o de tiro ï¿½ efetuada.
     public GameObject Efeito;
 
-    //O tiro se encontra na personagem, mas o objeto que instancia o projetil, está junto da camêra. Essa é a referência dele 
+    //O tiro se encontra na personagem, mas o objeto que instancia o projetil, estï¿½ junto da camï¿½ra. Essa ï¿½ a referï¿½ncia dele 
     public Transform ShootPointDrone1;
     public Transform Drone1;
     public Transform ShootPointDrone2;
@@ -25,7 +25,7 @@ public class PlayerTiro : MonoBehaviour
     public float FireRate = 1;
     float nextTimeToFire = 1;
 
-    //OBS: Tiro e bala são coisas diferentes. Quando digo tiro: é a função de atirar. Quando digo bala: é o projetil lançado.
+    //OBS: Tiro e bala sï¿½o coisas diferentes. Quando digo tiro: ï¿½ a funï¿½ï¿½o de atirar. Quando digo bala: ï¿½ o projetil lanï¿½ado.
 
 
     Animator animator;
@@ -40,14 +40,14 @@ public class PlayerTiro : MonoBehaviour
         //Clique direito do mouse aciona o disparo do drone1
         if (Input.GetButtonDown("Fire2"))
         {
-            //Tempo no qual vai lançar as balas
+            //Tempo no qual vai lanï¿½ar as balas
             nextTimeToFire = Time.time + FireRate;
             FindObjectOfType<AudioManager>().Play("Drone1"); // Som
             Rigidbody rb = Instantiate(bala1, ShootPointDrone1.position, ShootPointDrone1.rotation).GetComponent<Rigidbody>();
 
 
 
-            //Adiciona força ao ponto do tiro, para instanciar as balas de maneira adequada
+            //Adiciona forï¿½a ao ponto do tiro, para instanciar as balas de maneira adequada
             rb.AddRelativeForce(new Vector3(1, 3, 32), ForceMode.Impulse);
         }
 
