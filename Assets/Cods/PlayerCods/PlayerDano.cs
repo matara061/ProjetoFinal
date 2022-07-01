@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerDano : MonoBehaviour
 {
-    [Header("Condi�oes")]
+    [Header("Condições")]
     public int life = 10;
     public int currentLife = 10;
     public bool morte;

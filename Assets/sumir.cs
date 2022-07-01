@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PressãoBombaBoss : MonoBehaviour
+public class sumir : MonoBehaviour
 {
-    public GameObject Bomba;
     // Start is called before the first frame update
-    void Start()
+     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -18,9 +17,9 @@ public class PressãoBombaBoss : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("placa")) 
+        if (other.gameObject.CompareTag("mao1") || other.gameObject.CompareTag("mao2")) 
         {
-            Instantiate(Bomba, new Vector3 (-290, 7, 3), Quaternion.identity);
+            Debug.Log("encostou");
             Destroy(gameObject);
         }
     }

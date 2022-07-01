@@ -2,16 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Destruir : MonoBehaviour
+public class DanoArma : MonoBehaviour
 {
     [SerializeField]
     private PlayerDano dano;
-    public Mao2movi mao2;
-    public Mao1movi mao1;
+    [SerializeField]
+    private BossManager boss;
+    public Behaviour rotacionar;
     // Start is called before the first frame update
     void Start()
     {
         dano = FindObjectOfType<PlayerDano>();
+        boss = FindObjectOfType<BossManager>();
     }
 
     // Update is called once per frame
@@ -19,25 +21,18 @@ public class Destruir : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("Bomba"))
-        {
-            mao2.morrer = 1;
-            mao1.morrer = 1;
-        }
-    }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Bomba"))
+        if (other.CompareTag("chao"))//caso n acerte a o player e so desaparece
         {
-            mao2.morrer = 1;
-            mao1.morrer = 1;
+            Destroy(gameObject, 3f);
+            boss.DanoAoBoss();
         }
-        if (other.CompareTag("Player")) 
+        if (other.CompareTag("Player")) // caso acerte da dano e chama a funcao
         {
+            boss.DanoAoPlayer();
             dano.dam = true;
-            Debug.Log("deu dano");
+            Destroy(gameObject);
         }
     }
 }

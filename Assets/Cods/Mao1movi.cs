@@ -12,11 +12,13 @@ public class Mao1movi : MonoBehaviour
     public Transform proteger;
     public Mao2movi mao2;
     public int trocar2;
-    public int berserk;
     public int morrer;
+    [SerializeField]
+    private PlayerDano dano;
     // Start is called before the first frame update
     void Start()
     {
+        dano = FindObjectOfType<PlayerDano>();
         agent = GetComponent<NavMeshAgent>();
         anima = GetComponent<Animator>();
         trocar2 = 1;
@@ -35,9 +37,8 @@ public class Mao1movi : MonoBehaviour
         }
         if (morrer == 1)
         {
-            anima.Play("Armature|ArmatureAction G3");
-            Destroy(gameObject, 2.5f);
-            mao2.berserk = 1;
+            anima.Play("Armature|ArmatureAction 3");
+            Destroy(gameObject, 2.5f) ;
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -73,5 +74,6 @@ public class Mao1movi : MonoBehaviour
         agent.SetDestination(proteger.position);
         agent.speed = 7;
         mao2.trocar1 = 0;
+        dano.dam = false;
     }
 }

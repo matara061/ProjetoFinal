@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +8,7 @@ public class MinionDam : MonoBehaviour
     public GameObject LifeBar;
     public MinionMov minion;
 
-    [Header("Condi�oes")]
+    [Header("Condições")]
     public int life = 10;
     public int currentLife = 10;
 
