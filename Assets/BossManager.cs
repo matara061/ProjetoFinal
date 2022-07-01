@@ -12,6 +12,7 @@ public class BossManager : MonoBehaviour
     public Transform TBoss;
     public NascerPilar pilar1;
     public NascerPilar2 pilar2;
+    public BossMorrer morte;
     //public int danoAoBoss;
     //public int danoAoPlayer;
     // Start is called before the first frame update
@@ -25,6 +26,14 @@ public class BossManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (BossHealth <= 0)
+        {
+            Debug.Log("morreu");
+            pilar1.Collider.enabled = false;
+            pilar2.Collider.enabled = false;
+            rotacionar.enabled = false;
+            morte.Morrer();
+        }
     }
     public void DanoAoBoss()//pra quando o golpe n acertar o player fazendo a bomba cair
     {
@@ -49,9 +58,6 @@ public class BossManager : MonoBehaviour
     }
     void Morrer() 
     {
-        if (BossHealth == 0)
-        {
-            Debug.Log("morreu");
-        }
+        
     }
 }

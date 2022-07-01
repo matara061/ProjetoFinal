@@ -11914,6 +11914,7 @@ MonoBehaviour:
   TBoss: {fileID: 616400463}
   pilar1: {fileID: 1622412023}
   pilar2: {fileID: 1922504756}
+  morte: {fileID: 1197993592}
 --- !u!4 &739550978
 Transform:
   m_ObjectHideFlags: 0
@@ -12170,6 +12171,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &907583800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4aeb9e6bf968a50449881a5d35c318d9, type: 3}
+  m_PrefabInstance: {fileID: 299239644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &907583801
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907583800}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 56cf8db8b3d8fc34896a573ff91dd09f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &910534009 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b00cd3f0822d5f04ea6e8ba583d4e91b, type: 3}
@@ -13112,6 +13137,7 @@ GameObject:
   - component: {fileID: 1197993588}
   - component: {fileID: 1197993591}
   - component: {fileID: 1197993590}
+  - component: {fileID: 1197993592}
   m_Layer: 0
   m_Name: Boss FInal
   m_TagString: Untagged
@@ -13182,6 +13208,19 @@ MonoBehaviour:
   Lufraqueza: {fileID: 1674124225}
   fraqueza: {fileID: 7963064583269452779, guid: 448e710a6492d77498e0cab80d2c16c8, type: 3}
   sumirBomba: {fileID: 6181219156606014917, guid: 9a471fe85bcc88f4f88d1365ef1cf4c4, type: 3}
+--- !u!114 &1197993592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197993587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67e52f9579272c478de269bf81b85c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anima: {fileID: 907583801}
 --- !u!4 &1250278584 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c469f6a3ba8465345af6eb45ad4b62a6, type: 3}
