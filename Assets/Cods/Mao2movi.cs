@@ -14,6 +14,8 @@ public class Mao2movi : MonoBehaviour
     public int morrer;
     [SerializeField]
     private PlayerDano dano;
+
+    GameObject Objetivos;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class Mao2movi : MonoBehaviour
         trocar1 = 0;
         agent.speed = 7;
         morrer = 0;
+         Objetivos = GameObject.Find("Objetivos");
 
     }
 
@@ -39,6 +42,11 @@ public class Mao2movi : MonoBehaviour
         {
             anima.Play("Armature|ArmatureAction 4");
             Destroy(gameObject,2.5f);
+
+            // COMPLETA OBJETIVO
+            Objetivos.GetComponent<Objetivos>().Objetivo3.SetActive(false);
+            Objetivos.GetComponent<Objetivos>().concluido.SetActive(false);
+            Objetivos.GetComponent<Objetivos>().Objetivo4.SetActive(true);
 
         }
     }

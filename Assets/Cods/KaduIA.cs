@@ -41,15 +41,16 @@ public class KaduIA : MonoBehaviour
             //anim.SetBool("Acao",true);
             //anim.SetBool("Idle",false);
 
-            anim.Play("Armature|Acao");
+            //anim.Play("Armature|Acao");
+            StartCoroutine(acao());
             
         }
 
         if (distance >= lookRadius)
         {
             
-            agent.isStopped = false;
-            anim.Play("Armature|Andar");
+           // agent.isStopped = false;
+            anim.Play("Armature|Idle");
 
             FindObjectOfType<AudioManager>().Play("KaduInteracao");
         }
@@ -83,6 +84,16 @@ public class KaduIA : MonoBehaviour
         yield return new WaitForSeconds(20f);
 
         //agent.SetDestination(PontoA.transform.position);
+    }
+
+    IEnumerator acao()
+    {
+        anim.Play("Armature|Acao");
+
+        yield return new WaitForSeconds(5f);
+
+        anim.Play("Armature|Idle");
+
     }
 
     private void OnTriggerEnter(Collider other)
