@@ -13,6 +13,7 @@ public class Mao1movi : MonoBehaviour
     public Mao2movi mao2;
     public int trocar2;
     public int morrer;
+    public sumir sumir;
     [SerializeField]
     private PlayerDano dano;
     // Start is called before the first frame update
@@ -39,6 +40,7 @@ public class Mao1movi : MonoBehaviour
         {
             anima.Play("Armature|ArmatureAction 3");
             Destroy(gameObject, 2.5f) ;
+            sumir.Destruir();
         }
     }
     private void OnTriggerEnter(Collider other)

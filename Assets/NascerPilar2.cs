@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NascerPilar : MonoBehaviour
+public class NascerPilar2 : MonoBehaviour
 {
     public Collider Collider;
     public GameObject pilar;
@@ -17,13 +17,13 @@ public class NascerPilar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Collider.enabled = false;
+           Collider.enabled = false;
             Debug.Log("encostou");
             Instantiate(pilar, nascerPilar.position, nascerPilar.rotation);
             rotacionar.enabled = false;

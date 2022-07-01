@@ -7,7 +7,7 @@ public class sumir : MonoBehaviour
     // Start is called before the first frame update
      void Start()
     {
-       
+        Destroy(gameObject, 3f);
     }
 
     // Update is called once per frame
@@ -15,12 +15,8 @@ public class sumir : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter(Collision other)
+    public void Destruir() 
     {
-        if (other.gameObject.CompareTag("mao1") || other.gameObject.CompareTag("mao2")) 
-        {
-            Debug.Log("encostou");
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
     }
 }

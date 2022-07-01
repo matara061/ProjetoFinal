@@ -25,14 +25,14 @@ public class DanoArma : MonoBehaviour
     {
         if (other.CompareTag("chao"))//caso n acerte a o player e so desaparece
         {
-            Destroy(gameObject, 3f);
+            Destroy(gameObject, 2f);
             boss.DanoAoBoss();
         }
         if (other.CompareTag("Player")) // caso acerte da dano e chama a funcao
         {
+            Destroy(gameObject);
             boss.DanoAoPlayer();
             dano.dam = true;
-            Destroy(gameObject);
         }
     }
 }
