@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4902178335005619740}
   - component: {fileID: 4902178335005619741}
   - component: {fileID: 4902178335005619745}
-  - component: {fileID: 6181219156606014917}
   m_Layer: 0
   m_Name: Bomba
   m_TagString: Bomba
@@ -113,16 +112,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &6181219156606014917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4902178335005619738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78cf3caa58fd11f478364acd1a2e008b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  desaparecer: 1
