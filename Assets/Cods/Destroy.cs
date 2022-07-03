@@ -20,10 +20,12 @@ public class Destroy : MonoBehaviour
     void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.tag == "Tiro")
+
         {
             hp--;
             if (hp == 1)
             {
+                FindObjectOfType<AudioManager>().Play("Explosao");
                 Destroy(gameObject);
             }
         }

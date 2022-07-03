@@ -15,6 +15,7 @@ TagManager:
   - mao2
   - placa
   - chao
+  - Som
   layers:
   - Default
   - TransparentFX
