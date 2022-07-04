@@ -40,7 +40,7 @@ public class Teleporte : MonoBehaviour
     {
         personagem.charctrl.enabled = false;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
 
         personagem.charctrl.enabled = true;
 
