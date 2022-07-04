@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.21451542, g: 0.32218942, b: 0.29776865, a: 1}
+  m_IndirectSpecularColor: {r: 0.21451497, g: 0.32218936, b: 0.2977684, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5487,6 +5487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ponto: {fileID: 903920794}
   player: {fileID: 1502755414}
+  personagem: {fileID: 1379814439}
 --- !u!65 &308610087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10367,7 +10368,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 683059241}
-  m_LocalRotation: {x: 0.42455685, y: -0.000000015578678, z: 0.000000007305086, w: 0.9054013}
+  m_LocalRotation: {x: 0.41400635, y: -0.000000015662524, z: 0.0000000071235524, w: 0.910274}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -11809,8 +11810,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 7.820053, y: 1, z: 23.806746}
+  m_Center: {x: 1.0185165, y: 0, z: -11.403373}
 --- !u!23 &749098027
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12623,6 +12624,12 @@ MonoBehaviour:
     volume: 2
     pitch: 1
     loop: 1
+    source: {fileID: 0}
+  - name: Teleporte
+    clip: {fileID: 8300000, guid: 2f971c6086d2abc4c9e0a227c8bc11d2, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!4 &807298287
 Transform:
@@ -13617,7 +13624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dc432838555f3ce568bd49c7cd814ba2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -32.1
+      value: 48.14
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dc432838555f3ce568bd49c7cd814ba2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13936,8 +13943,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897300548}
-  m_LocalRotation: {x: 0.42455685, y: -0.00000001557881, z: 0.0000000073053625, w: 0.9054013}
-  m_LocalPosition: {x: 39.47229, y: -5.6718645, z: -53.22838}
+  m_LocalRotation: {x: 0.41400635, y: -0.000000015662595, z: 0.0000000071237074, w: 0.910274}
+  m_LocalPosition: {x: 39.47229, y: -10.273865, z: 30.757168}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2065052835}
@@ -15176,6 +15183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ponto: {fileID: 930819947}
   player: {fileID: 1502755414}
+  personagem: {fileID: 1379814439}
 --- !u!65 &1012937161
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15918,7 +15926,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060678459}
-  m_LocalRotation: {x: 0.4080178, y: 0.000000015708977, z: -0.0000000070205086, w: 0.912974}
+  m_LocalRotation: {x: 0.39738047, y: 3.2601618e-15, z: -1.411779e-15, w: 0.917654}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -20699,7 +20707,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438533818}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 39.47229, y: -5.6718645, z: -53.22838}
+  m_LocalPosition: {x: 39.47229, y: -5.6718645, z: 27.01162}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 683059242}
@@ -25786,7 +25794,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820509118}
-  m_LocalRotation: {x: 0.391388, y: 0.000000015833754, z: -0.00000000673437, w: 0.9202258}
+  m_LocalRotation: {x: 0.38066748, y: -0.000000015910947, z: 0.00000000654991, w: 0.924712}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -28433,6 +28441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ponto: {fileID: 245305933}
   player: {fileID: 1502755414}
+  personagem: {fileID: 1379814439}
 --- !u!65 &2023954485
 BoxCollider:
   m_ObjectHideFlags: 0
