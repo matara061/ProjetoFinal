@@ -27,11 +27,13 @@ public class Teleporte : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            StartCoroutine(CharacterControler());
+            personagem.charctrl.enabled = false;
+            //StartCoroutine(CharacterControler());
             FindObjectOfType<AudioManager>().Play("Teleporte");
             Debug.Log("teleport");
             player.transform.position = ponto.transform.position;
-           
+            personagem.charctrl.enabled = true;
+
         }
     }
 
