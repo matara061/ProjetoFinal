@@ -29,8 +29,8 @@ public class Teleporte : MonoBehaviour
         {
             personagem.charctrl.enabled = false;
             //StartCoroutine(CharacterControler());
-            FindObjectOfType<AudioManager>().Play("Teleporte");
-            Debug.Log("teleport");
+            //FindObjectOfType<AudioManager>().Play("Teleporte");
+            //Debug.Log("teleport");
             player.transform.position = ponto.transform.position;
             personagem.charctrl.enabled = true;
 

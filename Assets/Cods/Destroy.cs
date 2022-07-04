@@ -25,7 +25,7 @@ public class Destroy : MonoBehaviour
             hp--;
             if (hp == 1)
             {
-                FindObjectOfType<AudioManager>().Play("Explosao");
+                //FindObjectOfType<AudioManager>().Play("Explosao");
                 Destroy(gameObject);
             }
         }
