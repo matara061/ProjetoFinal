@@ -34,7 +34,7 @@ public class Menu : MonoBehaviour
     public void Iniciar()
     {
         FindObjectOfType<AudioManager>().Play("Iniciar"); // Carrega um som ao apertar o botão correspondente
-        SceneManager.LoadScene("Inicio");// carregar cena inicial
+        SceneManager.LoadScene("Dungeon Um");// carregar cena inicial
     }
 
     public void Creditos()

@@ -22,6 +22,7 @@ public class PontoCaixa : MonoBehaviour
         if (collision.gameObject.CompareTag("Caixa")) //  ponto de pressão vai ser destruido ao entrar em contato com a caixa
                                                     // Dessa forma, o bloqueio existente na hierarquia tbm é destruido
         {
+            FindObjectOfType<AudioManager>().Play("Estalo");
             Debug.Log("Destruido");
             Destroy(gameObject);
             //FindObjectOfType<AudioManager>().Play("MinionDead"); //Vou inserir som de explosão
