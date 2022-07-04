@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.497152, g: 0.59558564, b: 0.7924528, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 12e641d2de2a61add9d2e3ded6b07fd8, type: 2}
   m_HaloStrength: 0.5
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.60893553, g: 0.37473387, b: 0.4688692, a: 1}
+  m_IndirectSpecularColor: {r: 0.6089367, g: 0.3747345, b: 0.46886986, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 7bb4bcd698e8f3549a06a9b5ac348836, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -1617,7 +1617,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 4.84
+  m_Intensity: 4
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -12483,7 +12483,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 817606390}
-  m_LocalRotation: {x: 0.1209955, y: 0.0000000018932929, z: 2.3080327e-10, w: 0.9926531}
+  m_LocalRotation: {x: 0.1209955, y: -0.0000000018932929, z: -2.3080331e-10, w: 0.9926531}
   m_LocalPosition: {x: -24.82, y: -9.471771, z: 19.981585}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -19391,7 +19391,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610377521}
-  m_LocalRotation: {x: 0.102967404, y: -0.000000017114928, z: 0.0000000017716966, w: 0.99468476}
+  m_LocalRotation: {x: 0.102967404, y: 0.000000017114925, z: -0.0000000017716961, w: 0.99468476}
   m_LocalPosition: {x: 0, y: 0, z: -0.0000019073486}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
