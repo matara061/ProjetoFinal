@@ -51,7 +51,9 @@ public class BossManager : MonoBehaviour
     }
     public void DanoAoPlayer() //pra quando o golpe acertar o layer
     {
-            rotacionar.enabled = true;//ele volta a girar
+        rotacionar.enabled = true;//ele volta a girar
+        pilar1.Collider.enabled = true;
+        pilar2.Collider.enabled = true;
     }
     public void Fraqueza() 
     {

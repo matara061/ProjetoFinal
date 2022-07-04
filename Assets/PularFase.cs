@@ -3,20 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BossMorrer : MonoBehaviour
+public class PularFase : MonoBehaviour
 {
-    public Animator anima;
     // Start is called before the first frame update
-    public void Morrer()
+    void Start()
     {
-        Destroy(gameObject, 3f);
-        anima.Play("Cube|CubeAction");
-        SceneManager.LoadScene("Creditos");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.UpArrow)) 
+        {
+            Debug.Log("pular");
+            SceneManager.LoadScene("Dungeon 2");
+        }
     }
 }
